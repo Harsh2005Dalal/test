@@ -1,0 +1,47 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+:root{
+    --x : 100px;
+    --y : 100px;
+    --radius:150px;
+    --reveal:1;
+}
+
+html,body{
+    height: 100%;
+    width: 100%;
+    background-color: black;
+}
+
+main{
+    position: absolute;
+    inset: 0;
+    background-image: url('/q5.jpg');
+    z-index: 1;
+    background-size: cover;
+    background-position: top;
+}
+
+.spot{
+    position: absolute;
+    z-index: 2;
+    inset: 0;
+    background: radial-gradient(var(--radius) at var(--x) var(--y), rgba(255,255,255,0),rgba(0,0,0,var(--reveal)) 100%);
+}
+
+button{
+    position: relative;
+    z-index: 3;
+    background-color: transparent;
+    border: 2px solid white;
+    color: white;
+    font-weight: 500;
+    font-size: 16px;
+    padding: 8px;
+    margin: 8px;
+    border-radius: 8px;
+}
