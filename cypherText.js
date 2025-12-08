@@ -4,7 +4,7 @@ let mainText = main.innerText;
 let originalText = main.innerText;
 let len = mainText.length;
 
-let messages = ['Aalu Kahi ki, Kravu Message Change?', 'Aree Kaam krle meri Maa😅', 'B*hen ki                                                                                                                                                                                     ...., Samajh gyi hogi tu😂', 'Message bhi nhi krti, AALUUUU😡'];
+let messages = ['Aalu Kahi ki, Kravu Message Change?', 'Aree Kaam krle meri Maa', 'B*hen ki...., Samajh gyi hogi tu', 'Message bhi nhi krti, AALUUUU'];
 
 let button = document.querySelector('button');
 
