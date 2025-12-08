@@ -1,0 +1,51 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+html,body{
+    height: 100%;
+    width: 100%;
+    background-color: black;
+    color:white;
+}
+
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+main{
+    font-size: 4rem;
+    font-weight: 600;
+    color:transparent;
+    background: linear-gradient(to right, rgb(22, 128, 22), rgb(113, 185, 113), rgb(14, 206, 14));
+    background-clip: text;
+    font-family:
+    Arial, /* for normal text */
+    "Apple Color Emoji",
+    "Segoe UI Emoji",
+    "Noto Color Emoji"; /* forces emoji to stay colored */
+}
+
+button, a{
+    position: absolute;
+    z-index: 3;
+    background-color: transparent;
+    border: 2px solid white;
+    color: white;
+    font-weight: 500;
+    font-size: 12px;
+    padding: 6px;
+    margin: 6px;
+    border-radius: 8px;
+    text-decoration: none;
+    top:0px;
+    left:0px;
+    cursor: pointer;
+}
+
+

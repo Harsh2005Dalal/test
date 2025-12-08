@@ -1,0 +1,87 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+html,body{
+    height: 100%;
+    width: 100%;
+    background-color: black;
+    color: white;
+}
+
+@property --rotate{
+    syntax:'<angle>';
+    initial-value:0deg;
+    inherits:false;
+ }
+
+main{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.box{
+    border:0px solid rgba(255, 255, 255, 0);
+    display: flex;
+    color:white;
+    max-width: 200px;
+    flex-direction: column;
+    /* padding-inline:10px; */
+    padding-bottom: 10px;
+    border-radius: 16px;
+    gap:36px;
+    width: 300px;
+    box-shadow: none;
+    background: linear-gradient(black) padding-box,
+        conic-gradient(from var(--rotate),black,rgb(177, 11, 135),black) border-box;
+    animation: rotatingBorder 5s infinite linear;
+    animation-play-state: paused;
+    transition: all 0.3s linear;
+    text-shadow:none;
+  
+}
+
+.box:hover{
+ animation-play-state: running;
+ border-width: 5px;
+ box-shadow: 0 0 80px rgb(177, 11, 135);
+ color:rgb(177, 11, 135);
+ text-shadow:0 0 5px rgb(207, 24, 207);
+}
+
+img{
+    width:100%;
+    margin: auto;
+    border-radius: 12px;
+    height:250px;
+}
+
+h4{
+    font-size: 1.5rem;
+    font-weight: 600;
+    padding-left: 8px;
+}
+
+p{
+    font-size: 0.7rem;
+    font-weight: 400;
+    padding-left: 8px;
+    padding-right: 8px;
+}
+
+/* We cant animate background properties using keframes so,
+ we use @property to alter them as here in conic gradient */
+
+ @keyframes rotatingBorder{
+    from{
+        --rotate:0deg;
+    }
+    to{
+        --rotate:360deg;
+    }
+ }
